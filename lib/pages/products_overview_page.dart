@@ -52,7 +52,11 @@ class ProductsOverviewPage extends StatelessWidget {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, childAspectRatio: 3 / 2),
         itemBuilder: (context, index) {
-          return ProductItem(item: loadedProducts[index]);
+          return ProductItem(
+            id: loadedProducts[index].id,
+            imageUrl: loadedProducts[index].imageUrl,
+            title: loadedProducts[index].title,
+          );
         },
         itemCount: loadedProducts.length,
       )),
