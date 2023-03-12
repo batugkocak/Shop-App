@@ -11,6 +11,13 @@ class ProductItem extends StatelessWidget {
   final String id;
   final String imageUrl;
 
+  void navigateToProductDetails(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ProductDetailsPage(
+              title: title,
+            )));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,10 +46,7 @@ class ProductItem extends StatelessWidget {
           ),
           child: GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ProductDetailsPage(
-                        title: title,
-                      )));
+              navigateToProductDetails(context);
             },
             child: Image.network(
               imageUrl,
