@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.0.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -58,10 +59,10 @@ flutter:
 
   fonts:
     - family: Anton
-      fonts: 
+      fonts:
         - asset: assets/fonts/Anton-Regular.ttf
     - family: Lato
-      fonts: 
+      fonts:
         - asset: assets/fonts/Lato-Regular.ttf
         - asset: assets/fonts/Lato-Bold.ttf
 
@@ -92,8 +93,6 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-
-
 
   #
   # see https://flutter.dev/custom-fonts/#from-packages
